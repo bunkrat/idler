@@ -4,7 +4,8 @@ local function set_hi_grps()
     local hl = vim.api.nvim_set_hl
 
     local colors = {
-        gui00 = "#101010",
+        guiNO = "none",
+        gui00 = "#202020",
         gui01 = "#252525",
         gui02 = "#464646",
         gui03 = "#525252",
@@ -54,8 +55,8 @@ local function set_hi_grps()
     hl(0, "Conceal",                   { fg = colors.gui0D, bg = colors.gui00 })
     hl(0, "Cursor",                    { fg = colors.gui00, bg = colors.gui05 })
     hl(0, "NonText",                   { fg = colors.gui03 })
-    hl(0, "LineNr",                    { fg = colors.gui03, bg = "#202020" })
-    hl(0, "SignColumn",                { fg = colors.gui03, bg = "#202020" })
+    hl(0, "LineNr",                    { fg = colors.gui03, bg = colors.gui00 })
+    hl(0, "SignColumn",                { fg = colors.gui03, bg = colors.gui00 })
     hl(0, "StatusLine",                { fg = "#868690", 	bg = "#303030" })
     hl(0, "StatusLineNC",              { fg = colors.gui03, bg = colors.gui01 })
     hl(0, "VertSplit",                 { fg = colors.gui02, bg = colors.gui02 })
@@ -118,19 +119,19 @@ local function set_hi_grps()
     hl(0, "cssColor",                  { fg = colors.gui0C })
 
     -- Diff highlighting
-    hl(0, "DiffAdd",                   { fg = colors.gui0G, bg = "none" })
-    hl(0, "fugitiveHunk",              { fg = colors.gui04, bg = "none" })
-    hl(0, "fugitiveStagedHeading",     { fg = colors.gui0G, bg = "none" })
-    hl(0, "fugitiveUnstagedHeading",   { fg = colors.gui0H, bg = "none" })
-    hl(0, "fugitiveUnstagedModifier",  { fg = colors.gui0H, bg = "none" })
+    hl(0, "DiffAdd",                   { fg = colors.gui0G, bg = colors.guiNO })
+    hl(0, "fugitiveHunk",              { fg = colors.gui04, bg = colors.guiNO })
+    hl(0, "fugitiveStagedHeading",     { fg = colors.gui0G, bg = colors.guiNO })
+    hl(0, "fugitiveUnstagedHeading",   { fg = colors.gui0H, bg = colors.guiNO })
+    hl(0, "fugitiveUnstagedModifier",  { fg = colors.gui0H, bg = colors.guiNO })
     hl(0, "DiffChange",                { fg = colors.gui03, bg = colors.gui01 })
-    hl(0, "DiffDelete",                { fg = colors.gui0B, bg = "none" })
+    hl(0, "DiffDelete",                { fg = colors.gui0B, bg = colors.guiNO })
     hl(0, "DiffText",                  { fg = colors.gui0D, bg = colors.gui01 })
-    hl(0, "DiffAdded",                 { fg = colors.gui0G, bg = "none" })
-    hl(0, "DiffFile",                  { fg = colors.gui08, bg = "none" })
-    hl(0, "DiffNewFile",               { fg = colors.gui0B, bg = "none" })
-    hl(0, "DiffLine",                  { fg = colors.gui0H, bg = "none" })
-    hl(0, "DiffRemoved",               { fg = colors.gui0B, bg = "none" })
+    hl(0, "DiffAdded",                 { fg = colors.gui0G, bg = colors.guiNO })
+    hl(0, "DiffFile",                  { fg = colors.gui08, bg = colors.guiNO })
+    hl(0, "DiffNewFile",               { fg = colors.gui0B, bg = colors.guiNO })
+    hl(0, "DiffLine",                  { fg = colors.gui0H, bg = colors.guiNO })
+    hl(0, "DiffRemoved",               { fg = colors.gui0B, bg = colors.guiNO })
 
     -- Git highlighting
     hl(0, "gitcommitOverflow",         { fg = colors.gui08 })
