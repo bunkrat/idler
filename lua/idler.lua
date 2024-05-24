@@ -120,10 +120,6 @@ local function set_hi_grps()
 
     -- Diff highlighting
     hl(0, "DiffAdd",                   { fg = colors.gui0G, bg = colors.guiNO })
-    hl(0, "fugitiveHunk",              { fg = colors.gui04, bg = colors.guiNO })
-    hl(0, "fugitiveStagedHeading",     { fg = colors.gui0G, bg = colors.guiNO })
-    hl(0, "fugitiveUnstagedHeading",   { fg = colors.gui0H, bg = colors.guiNO })
-    hl(0, "fugitiveUnstagedModifier",  { fg = colors.gui0H, bg = colors.guiNO })
     hl(0, "DiffChange",                { fg = colors.gui03, bg = colors.gui01 })
     hl(0, "DiffDelete",                { fg = colors.gui0B, bg = colors.guiNO })
     hl(0, "DiffText",                  { fg = colors.gui0D, bg = colors.gui01 })
@@ -132,6 +128,12 @@ local function set_hi_grps()
     hl(0, "DiffNewFile",               { fg = colors.gui0B, bg = colors.guiNO })
     hl(0, "DiffLine",                  { fg = colors.gui0H, bg = colors.guiNO })
     hl(0, "DiffRemoved",               { fg = colors.gui0B, bg = colors.guiNO })
+
+	-- Fugitive highlighting
+    hl(0, "fugitiveHunk",              { fg = colors.gui04, bg = colors.guiNO })
+    hl(0, "fugitiveStagedHeading",     { fg = colors.gui0G, bg = colors.guiNO })
+    hl(0, "fugitiveUnstagedHeading",   { fg = colors.gui0H, bg = colors.guiNO })
+    hl(0, "fugitiveUnstagedModifier",  { fg = colors.gui0H, bg = colors.guiNO })
 
     -- Git highlighting
     hl(0, "gitcommitOverflow",         { fg = colors.gui08 })
@@ -162,47 +164,12 @@ local function set_hi_grps()
     hl(0, "htmlEndTag",                { fg = colors.gui05 })
     hl(0, "htmlTag",                   { fg = colors.gui05 })
 
-    -- JavaScript highlighting
-    hl(0, "javaScript",                { fg = colors.gui05 })
-    hl(0, "javaScriptBraces",          { fg = colors.gui05 })
-    hl(0, "javaScriptNumber",          { fg = colors.gui09 })
-
-    -- vim-js highlighting
-    hl(0, "jsOperator",                { fg = colors.gui0D })
-    hl(0, "jsStatement",               { fg = colors.gui0E })
-    hl(0, "jsReturn",                  { fg = colors.gui0E })
-    hl(0, "jsThis",                    { fg = colors.gui08 })
-    hl(0, "jsClassDefinition",         { fg = colors.gui0A })
-    hl(0, "jsFunction",                { fg = colors.gui0E })
-    hl(0, "jsFuncName",                { fg = colors.gui0D })
-    hl(0, "jsFuncCall",                { fg = colors.gui0D })
-    hl(0, "jsClassFuncName",           { fg = colors.gui0D })
-    hl(0, "jsClassMethodType",         { fg = colors.gui0E })
-    hl(0, "jsRegexpString",            { fg = colors.gui0C })
-    hl(0, "jsGlobalObjects",           { fg = colors.gui0A })
-    hl(0, "jsGlobalNodeObjects",       { fg = colors.gui0A })
-    hl(0, "jsExceptions",              { fg = colors.gui0A })
-    hl(0, "jsBuiltins",                { fg = colors.gui0A })
-
-    -- Mail highlighting
-    hl(0, "mailQuoted1",               { fg = colors.gui0A })
-    hl(0, "mailQuoted2",               { fg = colors.gui0B })
-    hl(0, "mailQuoted3",               { fg = colors.gui0E })
-    hl(0, "mailQuoted4",               { fg = colors.gui0C })
-    hl(0, "mailQuoted5",               { fg = colors.gui0D })
-    hl(0, "mailQuoted6",               { fg = colors.gui0A })
-    hl(0, "mailURL",                   { fg = colors.gui0D })
-    hl(0, "mailEmail",                 { fg = colors.gui0D })
-
     -- Markdown highlighting
     hl(0, "markdownCode",              { fg = colors.gui0B })
     hl(0, "markdownError",             { fg = colors.gui05, bg = colors.gui00 })
     hl(0, "markdownCodeBlock",         { fg = colors.gui0B })
     hl(0, "markdownHeadingDelimiter",  { fg = colors.gui0D })
-
-    -- NERDTree highlighting
-    hl(0, "NERDTreeDirSlash",          { fg = colors.gui0D })
-    hl(0, "NERDTreeExecFile",          { fg = colors.gui05 })
+    hl(0, "markdownBlockquote",        { fg = colors.gui0B })
 
     -- PHP highlighting
     hl(0, "phpMemberSelector",         { fg = colors.gui05 })
@@ -213,8 +180,8 @@ local function set_hi_grps()
     -- Python highlighting
     hl(0, "pythonOperator",            { fg = colors.gui0E })
     hl(0, "pythonRepeat",              { fg = colors.gui0E })
-    hl(0, "pythonInclude",             { fg = colors.gui0E })
-    hl(0, "pythonStatement",           { fg = colors.gui0E })
+    hl(0, "pythonInclude",             { fg = colors.gui0H })
+    hl(0, "pythonStatement",           { fg = colors.gui0H, bold = true })
 
     -- Ruby highlighting
     hl(0, "rubyAttribute",             { fg = colors.gui0D })
@@ -227,32 +194,15 @@ local function set_hi_grps()
     -- SASS highlighting
     hl(0, "sassidChar",                { fg = colors.gui08 })
     hl(0, "sassClassChar",             { fg = colors.gui09 })
-    hl(0, "sassInclude",               { fg = colors.gui0E })
+    hl(0, "sassInclude",               { fg = colors.gui0H })
     hl(0, "sassMixing",                { fg = colors.gui0E })
     hl(0, "sassMixinName",             { fg = colors.gui0D })
-
-    -- Signify highlighting
-    hl(0, "SignifySignAdd",            { fg = colors.gui0B, bg = colors.gui01 })
-    hl(0, "SignifySignChange",         { fg = colors.gui0D, bg = colors.gui01 })
-    hl(0, "SignifySignDelete",         { fg = colors.gui08, bg = colors.gui01 })
 
     -- Spelling highlighting
     hl(0, "SpellBad",                  { undercurl = true, sp = colors.gui08 })
     hl(0, "SpellLocal",                { undercurl = true, sp = colors.gui0C })
     hl(0, "SpellCap",                  { undercurl = true, sp = colors.gui0D })
     hl(0, "SpellRare",                 { undercurl = true, sp = colors.gui0E })
-
-    -- Startify highlighting
-    hl(0, "StartifyBracket",           { fg = colors.gui03 })
-    hl(0, "StartifyFile",              { fg = colors.gui07 })
-    hl(0, "StartifyFooter",            { fg = colors.gui03 })
-    hl(0, "StartifyHeader",            { fg = colors.gui0B })
-    hl(0, "StartifyNumber",            { fg = colors.gui09 })
-    hl(0, "StartifyPath",              { fg = colors.gui03 })
-    hl(0, "StartifySection",           { fg = colors.gui0E })
-    hl(0, "StartifySelect",            { fg = colors.gui0C })
-    hl(0, "StartifySlash",             { fg = colors.gui03 })
-    hl(0, "StartifySpecial",           { fg = colors.gui03 })
 end
 
 function M.setup()
