@@ -89,7 +89,7 @@ local function set_hi_grps()
     hl(0, "Structure",                 { fg = colors.gui08 })
     hl(0, "Tag",                       { fg = colors.gui08 })
     hl(0, "Todo",                      { fg = colors.gui08, bg = colors.gui01 })
-    hl(0, "Type",                      { fg = colors.gui08 })
+    hl(0, "Type",                      { fg = colors.gui0B })
     hl(0, "Typedef",                   { fg = colors.gui08 })
 
     -- C highlighting
