@@ -10,6 +10,6 @@ with lazy:
 
 ```lua
 return {
-    "abql/idler",
+    "rainswolves/idler",
 }
 ```
