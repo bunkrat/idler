@@ -10,6 +10,6 @@ with lazy:
 
 ```lua
 return {
-    "rainswolves/idler",
+    "framesper/idler",
 }
 ```
